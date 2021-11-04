@@ -1,7 +1,7 @@
 package cn.org.ecrp.ui.helper;
 
 
-import cn.org.ecrp.ui.base.EcrpException;
+import cn.org.ecrp.ui.base.UIException;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -83,7 +83,7 @@ public class LayoutHelper {
     public static Image icon(String resourcePath) {
         URL resource = LayoutHelper.class.getResource(resourcePath);
         if (resource == null) {
-            throw new EcrpException("Resource '" + resourcePath + "' not found.");
+            throw new UIException("Resource '" + resourcePath + "' not found.");
         }
         return new Image(resource.toExternalForm());
     }

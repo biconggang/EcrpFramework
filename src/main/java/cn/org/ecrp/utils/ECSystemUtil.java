@@ -1,6 +1,8 @@
 package cn.org.ecrp.utils;
 
 
+import cn.org.ecrp.controller.plugin.PluginManageService;
+import cn.org.ecrp.plugin.PluginManager;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,27 +51,27 @@ public class ECSystemUtil {
      * @Title: addJarByLibs
      * @Description: 添加libs中jar包到系统中
      */
-//    public static void addJarByLibs() {
-//        try {
-//            // 系统类库路径
-//            File libPath = new File("libs/");
-//            // 获取所有的.jar和.zip文件
-//            File[] jarFiles = libPath.listFiles(
-//                    (dir, name) -> name.endsWith(".jar")
-//            );
-//            if (jarFiles != null) {
-//                for (File file : jarFiles) {
-//                    if (!PluginManageService.isPluginEnabled(file.getName())) {
-//                        continue;
-//                    }
-//                    addJarClass(file);
-//                }
-//            }
-//            PluginManager.getInstance().loadLocalPlugins();
-//        } catch (Exception e) {
-//            logger.error("添加libs中jar包到系统中异常:", e);
-//        }
-//    }
+    public static void addJarByLibs() {
+        try {
+            // 系统类库路径
+            File libPath = new File("libs/");
+            // 获取所有的.jar和.zip文件
+            File[] jarFiles = libPath.listFiles(
+                    (dir, name) -> name.endsWith(".jar")
+            );
+            if (jarFiles != null) {
+                for (File file : jarFiles) {
+                    if (!PluginManageService.isPluginEnabled(file.getName())) {
+                        continue;
+                    }
+                    addJarClass(file);
+                }
+            }
+            PluginManager.getInstance().loadLocalPlugins();
+        } catch (Exception e) {
+            logger.error("添加libs中jar包到系统中异常:", e);
+        }
+    }
 
     /**
      * @Title: addJarClass

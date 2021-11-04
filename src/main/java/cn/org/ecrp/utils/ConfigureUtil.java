@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 
 public class ConfigureUtil {
-    final static Logger logger = LoggerFactory.getLogger("ECSystemUtil");
+    final static Logger logger = LoggerFactory.getLogger("ConfigureUtil");
 
     public static String getConfigurePath() {
         String res = System.getProperty("user.dir") + "/xJavaFxTool/";

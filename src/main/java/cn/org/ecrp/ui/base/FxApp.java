@@ -18,14 +18,12 @@ import java.util.List;
  */
 public class FxApp {
 
-    // 获得 App 主窗体
-    public static Stage primaryStage;
-
-    // 获得 App 图标，用于主窗体和对话框上
-    public static Image appIcon;
-
     // 获得全局 CSS，用于主窗体和对话框上
     public static final List<String> styleSheets = new ArrayList<>();
+    // 获得 App 主窗体
+    public static Stage primaryStage;
+    // 获得 App 图标，用于主窗体和对话框上
+    public static Image appIcon;
 
     // 初始化全局属性
     public static void init(Stage primaryStage, String iconPath) {
