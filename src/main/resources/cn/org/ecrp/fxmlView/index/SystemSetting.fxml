@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <VBox xmlns="http://javafx.com/javafx/8.0.171"
     xmlns:fx="http://javafx.com/fxml/1" spacing="15"
-    fx:controller="com.xwintop.xJavaFxTool.controller.index.SystemSettingController">
+    fx:controller="cn.org.ecrp.controller.syssetting.SystemSettingController">
 
     <padding>
         <Insets topRightBottomLeft="30"/>

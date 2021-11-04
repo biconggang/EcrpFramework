@@ -1,9 +1,13 @@
 package cn.org.ecrp;
 
+import cn.org.ecrp.controller.index.IndexController;
+import cn.org.ecrp.ui.base.FxApp;
 import cn.org.ecrp.ui.dialog.FxAlerts;
+import cn.org.ecrp.ui.util.JavaFxViewUtil;
 import cn.org.ecrp.utils.Config;
 import cn.org.ecrp.utils.ECSystemUtil;
 import cn.org.ecrp.utils.StageUtils;
+import com.jfoenix.controls.JFXDecorator;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.Event;
@@ -45,27 +49,27 @@ public class Main extends Application {
         stage = primaryStage;
 
         // 初始化 JavaFX 全局设置
-//        FxApp.init(primaryStage, LOGO_PATH);
-//        FxApp.setupIcon(primaryStage);
-//        FxApp.styleSheets.add(Main.class.getResource("/css/jfoenix-main.css").toExternalForm());
-//
-//        primaryStage.setResizable(true);
-//        primaryStage.setTitle(RESOURCE_BUNDLE.getString("Title") + Config.EcrpVersions);
-//        primaryStage.setOnCloseRequest(this::confirmExit);
-//
-//        if (Config.getBoolean(Config.Keys.NewLauncher, false)) {
-//            loadNewUI(primaryStage);
-//        } else {
-//            // loadClassicUI(primaryStage);
-//        }
-//
-//        StageUtils.loadPrimaryStageBound(primaryStage);
-//        primaryStage.show();
-//        StageUtils.updateStageStyle(primaryStage);
+        FxApp.init(primaryStage, LOGO_PATH);
+        FxApp.setupIcon(primaryStage);
+        FxApp.styleSheets.add(Main.class.getResource("/css/jfoenix-main.css").toExternalForm());
 
-        scene = new Scene(loadFXML("primary"), 640, 480);
-        stage.setScene(scene);
-        stage.show();
+        primaryStage.setResizable(true);
+        primaryStage.setTitle(RESOURCE_BUNDLE.getString("Title") + Config.EcrpVersions);
+        primaryStage.setOnCloseRequest(this::confirmExit);
+
+        if (Config.getBoolean(Config.Keys.NewLauncher, false)) {
+            loadNewUI(primaryStage);
+        } else {
+            loadClassicUI(primaryStage);
+        }
+
+        StageUtils.loadPrimaryStageBound(primaryStage);
+        primaryStage.show();
+        StageUtils.updateStageStyle(primaryStage);
+
+//        scene = new Scene(loadFXML("primary"), 640, 480);
+//        stage.setScene(scene);
+//        stage.show();
 
     }
 
@@ -78,21 +82,21 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root));
     }
 
-//    private void loadClassicUI(Stage primaryStage) throws IOException {
-//        FXMLLoader fXMLLoader = IndexController.getFXMLLoader();
-//        Parent root = fXMLLoader.load();
-//
-//        JFXDecorator decorator = JavaFxViewUtil.getJFXDecorator(
-//                primaryStage,
-//                RESOURCE_BUNDLE.getString("Title") + Config.xJavaFxToolVersions,
-//                LOGO_PATH,
-//                root
-//        );
-//        decorator.setOnCloseButtonAction(() -> confirmExit(null));
-//
-//        Scene scene = JavaFxViewUtil.getJFXDecoratorScene(decorator);
-//        primaryStage.setScene(scene);
-//    }
+    private void loadClassicUI(Stage primaryStage) throws IOException {
+        FXMLLoader fXMLLoader = IndexController.getFXMLLoader();
+        Parent root = fXMLLoader.load();
+
+        JFXDecorator decorator = JavaFxViewUtil.getJFXDecorator(
+                primaryStage,
+                RESOURCE_BUNDLE.getString("Title") + Config.EcrpVersions,
+                LOGO_PATH,
+                root
+        );
+        decorator.setOnCloseButtonAction(() -> confirmExit(null));
+
+        Scene scene = JavaFxViewUtil.getJFXDecoratorScene(decorator);
+        primaryStage.setScene(scene);
+    }
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));

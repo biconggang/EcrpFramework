@@ -16,13 +16,6 @@
     <dependencies>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>${openjfx.version}</version>
@@ -38,6 +31,13 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
             <version>${openjfx.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.sun.jna/jna/3.0.9 -->
@@ -169,7 +169,6 @@
                     <mainClass>cn.org.ecrp.Main</mainClass>
                     <vendor>ECRP</vendor>
                     <appName>ecrpFramework</appName>
-                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>

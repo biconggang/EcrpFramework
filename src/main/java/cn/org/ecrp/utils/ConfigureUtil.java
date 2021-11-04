@@ -9,7 +9,7 @@ public class ConfigureUtil {
     final static Logger logger = LoggerFactory.getLogger("ConfigureUtil");
 
     public static String getConfigurePath() {
-        String res = System.getProperty("user.dir") + "/xJavaFxTool/";
+        String res = System.getProperty("user.dir") + "/config/";
         logger.info(res);
         return res;
     }

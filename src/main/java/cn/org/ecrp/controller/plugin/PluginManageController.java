@@ -33,7 +33,7 @@ import java.util.function.Consumer;
 
 public class PluginManageController extends PluginManageView {
     final static Logger logger = LoggerFactory.getLogger("PluginManageController");
-    public static final String FXML = "/com/xwintop/xJavaFxTool/fxmlView/index/PluginManage.fxml";
+    public static final String FXML = "/cn/org/ecrp/fxmlView/index/PluginManage.fxml";
 
     private PluginManageService pluginManageService = new PluginManageService(this);
 

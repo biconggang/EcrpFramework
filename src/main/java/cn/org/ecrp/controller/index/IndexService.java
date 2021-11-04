@@ -60,7 +60,7 @@ public class IndexService {
     }
 
     public void addNodepadAction(ActionEvent event) {
-        Parent notepad = FxmlUtil.load("/com/xwintop/xJavaFxTool/fxmlView/notepad.fxml");
+        Parent notepad = FxmlUtil.load("/cn/org/ecrp/fxmlView/notepad.fxml");
         if (indexController.getSingleWindowBootCheckBox().isSelected()) {
             JavaFxViewUtil.getNewStage(indexController.getBundle().getString("addNodepad"), null, notepad);
         } else {

@@ -4,6 +4,6 @@
 <?import javafx.scene.layout.VBox?>
 <VBox style="-fx-padding: 5">
     <TextArea VBox.vgrow="ALWAYS"
-        style="-fx-font-size: 13; -fx-font-family: 'Fira Code', 'Consolas', monospace, 'Microsoft YaHei', sans-serif;-fx-border-color: #888888"/>
+              style="-fx-font-size: 13; -fx-font-family: 'Fira Code', 'Consolas', monospace, 'Microsoft YaHei', sans-serif;-fx-border-color: #888888"/>
 </VBox>
 
