@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>cn.org.ecrp</groupId>
+    <groupId>org.ecrp</groupId>
     <artifactId>ecrp-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -180,7 +180,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>8.8.3</version>
                 <configuration>
-                    <mainClass>cn.org.ecrp.Main</mainClass>
+                    <mainClass>org.ecrp.Main</mainClass>
                     <vendor>ECRP</vendor>
                     <appName>ecrpFramework</appName>
                 </configuration>
