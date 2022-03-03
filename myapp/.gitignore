@@ -1,0 +1,6 @@
+# Default ignored files
+#/.gitignore
+/.idea
+/*.iml
+/logs
+/target
